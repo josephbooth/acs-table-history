@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Census Table Repository - B01001</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      max-width: 65%;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    .snapshot, .note {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .snapshot-year {
+      font-weight: bold;
+    }
+    .note-timestamp {
+      font-size: 0.85em;
+      color: #555;
+    }
+    .note-author {
+      font-size: 0.85em;
+      color: #0073e6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Table History: B01001 - SEX BY AGE</h1>
+  <h2>Snapshots</h2>
+  <section id="snapshots"></section>
+
+  <h2>Admin Notes</h2>
+  <section id="notes"></section>
+
+  <script>
+    // Fetch table data from JSON file on shared drive
+    let tableData = {};
+
+    document.addEventListener('DOMContentLoaded', () => {
+    // Create a file input dynamically
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json';
+    fileInput.style.marginBottom = '20px';
+    fileInput.addEventListener('change', handleFileSelect);
+    
+    document.body.insertBefore(fileInput, document.getElementById('snapshots'));
+
+    function handleFileSelect(event) {
+        const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+            try {
+                tableData = JSON.parse(e.target.result);
+                renderSnapshotsAndNotes();
+            } catch (err) {
+                console.error('Error parsing JSON file:', err);
+                alert('Failed to load JSON file. Make sure it is valid.');
+            }
+            };
+            reader.readAsText(file);
+        }
+    });
+
+    // Render function same as before
+    function renderSnapshotsAndNotes() {
+        const snapshotsDiv = document.getElementById("snapshots");
+        snapshotsDiv.innerHTML = ''; // clear previous content
+        tableData.snapshots.forEach(snap => {
+            const div = document.createElement("div");
+            div.className = "snapshot";
+            div.innerHTML = `
+            <div class="snapshot-year">Year: ${snap.year} (Dataset: ${snap.dataset})</div>
+            <div><strong>Metadata Name:</strong> ${snap.metadata.name}</div>
+            <div><strong>Variables:</strong> ${snap.metadata.variables.join(", ")}</div>
+            <div><strong>Description:</strong> ${snap.metadata.description}</div>
+            `;
+            snapshotsDiv.appendChild(div);
+        });
+
+        const notesDiv = document.getElementById("notes");
+        notesDiv.innerHTML = ''; // clear previous notes
+        tableData.notes.forEach(note => {
+            const div = document.createElement("div");
+            div.className = "note";
+            div.innerHTML = `
+            <div class="note-timestamp">${note.timestamp}</div>
+            <div class="note-author">Author: ${note.author}</div>
+            <div class="note-text">${note.note}</div>
+            `;
+            notesDiv.appendChild(div);
+        });
+    }
+  </script>
+
+</body>
+</html>

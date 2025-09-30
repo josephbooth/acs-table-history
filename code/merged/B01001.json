@@ -1,0 +1,127 @@
+{
+  "group_id": "B01001",
+  "snapshots": [
+    {
+      "year": 2014,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2015,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2016,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2017,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E"],
+        "description": "Population by sex and age (added variable B01001_004E)"
+      }
+    },
+    {
+      "year": 2018,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2019,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2020,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2021,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E"],
+        "description": "Population by sex and age"
+      }
+    },
+    {
+      "year": 2022,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E","B01001_005E"],
+        "description": "Population by sex and age (added variable B01001_005E)"
+      }
+    },
+    {
+      "year": 2023,
+      "dataset": "acs/acs5",
+      "metadata": {
+        "name": "SEX BY AGE",
+        "variables": ["B01001_001E","B01001_002E","B01001_003E","B01001_004E","B01001_005E"],
+        "description": "Population by sex and age"
+      }
+    }
+  ],
+  "notes": [
+    {"timestamp": "2025-01-01T08:00:00", "author": "Admin1", "note": "Verified variable B01001_001E naming."},
+    {"timestamp": "2025-01-02T09:30:00", "author": "Admin2", "note": "Added note about changes in 2017."},
+    {"timestamp": "2025-01-03T10:15:00", "author": "Admin1", "note": "Confirmed B01001_004E addition in 2017."},
+    {"timestamp": "2025-01-04T11:00:00", "author": "Admin3", "note": "Noted potential label discrepancy in 2018."},
+    {"timestamp": "2025-01-05T12:20:00", "author": "Admin1", "note": "B01001_002E verified against documentation."},
+    {"timestamp": "2025-01-06T13:45:00", "author": "Admin2", "note": "Minor formatting correction in metadata."},
+    {"timestamp": "2025-01-07T14:30:00", "author": "Admin3", "note": "Historical note on 2016 dataset."},
+    {"timestamp": "2025-01-08T15:15:00", "author": "Admin1", "note": "Noted that 2019 metadata matches 2018."},
+    {"timestamp": "2025-01-09T08:50:00", "author": "Admin2", "note": "Added clarification about variable B01001_003E."},
+    {"timestamp": "2025-01-10T09:40:00", "author": "Admin3", "note": "Documented addition of variable B01001_005E in 2022."},
+    {"timestamp": "2025-01-11T10:25:00", "author": "Admin1", "note": "Reviewed historical labels 2014-2016."},
+    {"timestamp": "2025-01-12T11:15:00", "author": "Admin2", "note": "Confirmed no changes in 2020 snapshot."},
+    {"timestamp": "2025-01-13T12:05:00", "author": "Admin3", "note": "Cross-checked against census documentation."},
+    {"timestamp": "2025-01-14T13:55:00", "author": "Admin1", "note": "Clarified description wording in 2021 snapshot."},
+    {"timestamp": "2025-01-15T14:45:00", "author": "Admin2", "note": "Verified variable order consistency."},
+    {"timestamp": "2025-01-16T15:30:00", "author": "Admin3", "note": "Added note about 2015 dataset stability."},
+    {"timestamp": "2025-01-17T08:20:00", "author": "Admin1", "note": "Historical observation: no changes 2014-2015."},
+    {"timestamp": "2025-01-18T09:10:00", "author": "Admin2", "note": "Confirmed B01001_001E and B01001_002E values."},
+    {"timestamp": "2025-01-19T10:00:00", "author": "Admin3", "note": "Added note about dataset ACS5."},
+    {"timestamp": "2025-01-20T11:50:00", "author": "Admin1", "note": "Metadata snapshot reviewed for consistency."},
+    {"timestamp": "2025-01-21T12:40:00", "author": "Admin2", "note": "Clarified variable definitions."},
+    {"timestamp": "2025-01-22T13:30:00", "author": "Admin3", "note": "Note on labeling conventions across years."},
+    {"timestamp": "2025-01-23T14:15:00", "author": "Admin1", "note": "Confirmed no missing variables."},
+    {"timestamp": "2025-01-24T15:00:00", "author": "Admin2", "note": "Historical note: variable B01001_003E consistent."},
+    {"timestamp": "2025-01-25T08:45:00", "author": "Admin3", "note": "Added commentary on data quality."},
+    {"timestamp": "2025-01-26T09:30:00", "author": "Admin1", "note": "Verified snapshot 2022 matches source."},
+    {"timestamp": "2025-01-27T10:15:00", "author": "Admin2", "note": "Minor correction in description text."},
+    {"timestamp": "2025-01-28T11:00:00", "author": "Admin3", "note": "Noted variable renaming in 2021."},
+    {"timestamp": "2025-01-29T12:50:00", "author": "Admin1", "note": "Checked all years for consistency."},
+    {"timestamp": "2025-01-30T13:40:00", "author": "Admin2", "note": "Confirmed notes fully synchronized."}
+  ]
+}

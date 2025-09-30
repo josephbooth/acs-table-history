@@ -19,9 +19,9 @@ We’re working with both ACS 1-year and 5-year datasets to ensure the informati
 Welcome aboard! We’re excited to have you here, and your contributions will help make this vision a reality.
 """
 
-def get_previous_year():
-    """Return the previous calendar year."""
-    return datetime.now().year - 1
+def get_full_data_year():
+    """Return the calendar year with both 1 nad 5 year data published."""
+    return datetime.now().year - 2
 
 def main():
     # Print header
@@ -36,7 +36,7 @@ def main():
     print()
 
     # Build endpoint list with resolved year
-    year = get_previous_year()
+    year = get_full_data_year()
     endpoints = [
         ("All datasets (master list)", "https://api.census.gov/data.json"),
         ("ACS 1-Year dataset", f"https://api.census.gov/data/{year}/acs/acs1.json"),

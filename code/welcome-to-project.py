@@ -30,10 +30,10 @@ def main():
     print("=" * 70)
     print()
 
-    # Wrap and print summary
-    wrapped = textwrap.fill(SUMMARY, width=70)
-    print(wrapped)
-    print()
+    # Wrap and print summary with paragraph breaks preserved
+    for paragraph in SUMMARY.strip().split("\n\n"):
+        wrapped = textwrap.fill(paragraph, width=70)
+        print(wrapped + "\n")
 
     # Build endpoint list with resolved year
     year = get_full_data_year()

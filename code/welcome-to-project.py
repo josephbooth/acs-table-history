@@ -5,6 +5,8 @@ A friendly onboarding script for new contributors.
 """
 
 import textwrap
+import webbrowser
+from datetime import datetime
 
 # Project summary (hard-coded, ~200 words)
 SUMMARY = """
@@ -16,6 +18,10 @@ We’re working with both ACS 1-year and 5-year datasets to ensure the informati
 
 Welcome aboard! We’re excited to have you here, and your contributions will help make this vision a reality.
 """
+
+def get_previous_year():
+    """Return the previous calendar year."""
+    return datetime.now().year - 1
 
 def main():
     # Print header
@@ -29,8 +35,39 @@ def main():
     print(wrapped)
     print()
 
-    print("-" * 70)
-    print("End of welcome message. Happy coding!")
+    # Build endpoint list with resolved year
+    year = get_previous_year()
+    endpoints = [
+        ("All datasets (master list)", "https://api.census.gov/data.json"),
+        ("ACS 1-Year dataset", f"https://api.census.gov/data/{year}/acs/acs1.json"),
+        ("ACS 5-Year dataset", f"https://api.census.gov/data/{year}/acs/acs5.json"),
+        ("ACS 1-Year groups", f"http://api.census.gov/data/{year}/acs/acs1/groups.json"),
+        ("ACS 5-Year groups", f"http://api.census.gov/data/{year}/acs/acs5/groups.json"),
+    ]
+
+    # Show menu
+    print(f"Available Census API endpoints (using year = {year}):")
+    for i, (label, url) in enumerate(endpoints, start=1):
+        print(f"{i}. {url}  <-- {label}")
+    print()
+
+    # Interactive loop
+    while True:
+        choice = input("Enter the number of an endpoint to open, or 'q' to quit: ").strip().lower()
+        if choice == "q":
+            print("\nThanks for checking out the project! Happy coding 🎉")
+            break
+        elif choice.isdigit():
+            idx = int(choice)
+            if 1 <= idx <= len(endpoints):
+                label, url = endpoints[idx - 1]
+                print(f"Opening {label} in your browser...")
+                webbrowser.open(url)
+            else:
+                print("Invalid number. Please pick from the list.")
+        else:
+            print("Invalid input. Please enter a number or 'q'.")
+
     print("-" * 70)
 
 if __name__ == "__main__":
